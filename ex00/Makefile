@@ -2,7 +2,7 @@ NAME = claptrap
 CXX = c++
 CXXFLAGS := -Wall -Wextra -Werror
 
-SOURCES := main.cpp
+SOURCES := main.cpp ClapTrap.cpp
 OBJECTS := $(SOURCES:.cpp=.o)
 
 target asan: CXXFLAGS += -fsanitize=address,undefined -g
