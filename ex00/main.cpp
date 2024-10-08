@@ -5,6 +5,6 @@ int main(void)
 {
 	ClapTrap c("Name");
 
-	std::cout << "ClapTrap" << std::endl;
+	c.attack("target");
 	return 0;
 }
