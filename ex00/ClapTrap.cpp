@@ -23,6 +23,9 @@ void ClapTrap::attack(const std::string& target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << "ClapTrap " << this->_name << " took " << amount << " points of damage" << std::endl;
+	if (amount > this->_hitpoints)
+		amount = this->_hitpoints;
+	this->_hitpoints -= amount;
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {
