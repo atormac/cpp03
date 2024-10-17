@@ -1,4 +1,5 @@
 #include <iostream>
+#include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
 int main(void)
@@ -9,5 +10,8 @@ int main(void)
 	c.attack("target");
 	c.takeDamage(5);
 	c.beRepaired(5);
+
+
+	ScavTrap("abc");
 	return 0;
 }
