@@ -11,6 +11,7 @@ class ClapTrap
 		unsigned int _energypoints = 10;
 		unsigned int _attackdamage = 0;
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		~ClapTrap();
 		void attack(const std::string& target);
