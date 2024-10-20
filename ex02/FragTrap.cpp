@@ -11,7 +11,7 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap destructor name: " << this->_name << std::endl;
 }
 
-FragTrap::FragTrap(std::string namew : ClapTrap(name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	this->_name = name;
 	this->_hitpoints = 100;

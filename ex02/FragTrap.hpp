@@ -1,10 +1,10 @@
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
-#include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 #include <iostream>
 
-class FragTrap : public ScavTrap
+class FragTrap : public ClapTrap
 {
 
 	private:
