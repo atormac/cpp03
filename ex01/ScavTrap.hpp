@@ -7,8 +7,13 @@
 class ScavTrap : public ClapTrap
 {
 
+	private:
+		bool _is_guarding;
 	public:
+		ScavTrap();
+		~ScavTrap();
 		ScavTrap(std::string);
+		void	guardGate();
 
 };
 #endif

@@ -4,14 +4,9 @@
 
 int main(void)
 {
-	ClapTrap target("target");
-	ClapTrap c("Name");
-
-	c.attack("target");
-	c.takeDamage(5);
-	c.beRepaired(5);
-
-
-	ScavTrap("abc");
+	ScavTrap s("abc");
+	s.guardGate();
+	s.attack("target");
+	s.guardGate();
 	return 0;
 }
