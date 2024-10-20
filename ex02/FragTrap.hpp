@@ -7,13 +7,11 @@
 class FragTrap : public ClapTrap
 {
 
-	private:
-		bool _is_guarding;
 	public:
 		FragTrap();
 		~FragTrap();
 		FragTrap(std::string);
-		void	guardGate();
+		void	highFivesGuys();
 
 };
 #endif

@@ -1,12 +1,9 @@
 #include <iostream>
-#include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-	ScavTrap s("abc");
-	s.guardGate();
-	s.attack("target");
-	s.guardGate();
+	FragTrap f("abc");
+	f.highFivesGuys();
 	return 0;
 }

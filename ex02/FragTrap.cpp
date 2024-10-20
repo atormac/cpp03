@@ -2,8 +2,7 @@
 
 FragTrap::FragTrap() : ClapTrap("default")
 {
-	this->_is_guarding = false;
-	std::cout << "FragTrap default constructor: " << std::endl;
+	std::cout << "FragTrap default constructor called !" << std::endl;
 }
 
 FragTrap::~FragTrap()
@@ -15,17 +14,12 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	this->_name = name;
 	this->_hitpoints = 100;
-	this->_energypoints = 50;
-	this->_attackdamage = 20;
-	this->_is_guarding = false;
+	this->_energypoints = 100;
+	this->_attackdamage = 30;
 	std::cout << "FragTrap constructor name: " << name << std::endl;
 }
 
-void	FragTrap::guardGate()
+void	FragTrap::highFivesGuys()
 {
-	if (!this->_is_guarding)
-		std::cout << "FragTrap " << this->_name << " is in gatekeeper mode!" << std::endl;
-	else
-		std::cout << "FragTrap " << this->_name << " already in gatekeeper mode!" << std::endl;
-	this->_is_guarding = true;
+	std::cout << "FragTrap " << this->_name << "high fives guys!" << std::endl;
 }
