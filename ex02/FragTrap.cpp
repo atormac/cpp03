@@ -19,7 +19,17 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	std::cout << "FragTrap constructor name: " << name << std::endl;
 }
 
+FragTrap &FragTrap::operator=(const FragTrap &s)
+{
+	std::cout << "FragTrap " << s._name << " assignment overload called " << std::endl;
+	this->_name = s._name;
+	this->_hitpoints = s._hitpoints;
+	this->_energypoints = s._energypoints;
+	this->_attackdamage = s._attackdamage;
+	return *this;
+}
+
 void	FragTrap::highFivesGuys()
 {
-	std::cout << "FragTrap " << this->_name << "high fives guys!" << std::endl;
+	std::cout << "FragTrap " << this->_name << " high fives guys!" << std::endl;
 }

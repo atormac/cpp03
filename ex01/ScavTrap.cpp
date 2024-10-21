@@ -21,8 +21,23 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap constructor name: " << name << std::endl;
 }
 
+ScavTrap &ScavTrap::operator=(const ScavTrap &s)
+{
+	std::cout << "ScavTrap " << s._name << " assignment overload called " << std::endl;
+	this->_name = s._name;
+	this->_hitpoints = s._hitpoints;
+	this->_energypoints = s._energypoints;
+	this->_attackdamage = s._attackdamage;
+	return *this;
+}
+
 void	ScavTrap::guardGate()
 {
+	if (this->_hitpoints == 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " is dead!" << std::endl;
+		return;
+	}
 	if (!this->_is_guarding)
 		std::cout << "ScavTrap " << this->_name << " is in gatekeeper mode!" << std::endl;
 	else
