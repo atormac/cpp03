@@ -29,6 +29,8 @@ ScavTrap::ScavTrap(const ScavTrap &s) : ClapTrap(s)
 ScavTrap &ScavTrap::operator=(const ScavTrap &s)
 {
 	std::cout << "ScavTrap " << s._name << " assignment overload called " << std::endl;
+	if (this == &s)
+		return *this;
 	this->_name = s._name;
 	this->_hitpoints = s._hitpoints;
 	this->_energypoints = s._energypoints;
