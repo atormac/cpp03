@@ -12,5 +12,8 @@ int main(void)
 	s.takeDamage(50);
 	s.takeDamage(50);
 	s.takeDamage(70);
+
+	ScavTrap s2 = s;
+	s2.attack("second target");
 	return 0;
 }
