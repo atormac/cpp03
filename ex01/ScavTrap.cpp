@@ -21,6 +21,11 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap constructor name: " << name << std::endl;
 }
 
+ScavTrap::ScavTrap(const ScavTrap &s) : ClapTrap(s)
+{
+	std::cout << "ScavTrap copy constructor called" << std::endl;
+}
+
 ScavTrap &ScavTrap::operator=(const ScavTrap &s)
 {
 	std::cout << "ScavTrap " << s._name << " assignment overload called " << std::endl;
