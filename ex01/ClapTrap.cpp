@@ -31,7 +31,6 @@ ClapTrap::ClapTrap(const ClapTrap &c)
 }
 ClapTrap &ClapTrap::operator=(const ClapTrap &c)
 {
-	std::cout << "ClapTrap " << c._name << " assignment overload called " << std::endl;
 	this->_name = c._name;
 	this->_hitpoints = c._hitpoints;
 	this->_energypoints = c._energypoints;
@@ -58,6 +57,11 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
+	if (this->_hitpoints == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " has is dead!" << std::endl;
+		return;
+	}
 	std::cout << "ClapTrap " << this->_name << " took " << amount << " points of damage" << std::endl;
 	if (amount > this->_hitpoints)
 		amount = this->_hitpoints;
@@ -69,6 +73,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 	if (this->_energypoints == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " has no energy points to repair!" << std::endl;
+		return;
+	}
+	if (this->_hitpoints == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " has no hitpoints to repair!" << std::endl;
 		return;
 	}
 	this->_energypoints--;

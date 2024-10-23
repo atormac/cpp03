@@ -11,7 +11,7 @@ class ScavTrap : public ClapTrap
 		bool _is_guarding;
 	public:
 		ScavTrap();
-		~ScavTrap();
+		virtual ~ScavTrap();
 		ScavTrap(std::string);
 		ScavTrap &operator=(const ScavTrap &s);
 		void	guardGate();
