@@ -9,5 +9,8 @@ int main(void)
 	c.attack("target");
 	c.takeDamage(5);
 	c.beRepaired(5);
+	c.takeDamage(5);
+	c.takeDamage(5);
+	c.takeDamage(5);
 	return 0;
 }

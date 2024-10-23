@@ -28,6 +28,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &s)
 	this->_hitpoints = s._hitpoints;
 	this->_energypoints = s._energypoints;
 	this->_attackdamage = s._attackdamage;
+	this->_is_guarding = s._is_guarding;
 	return *this;
 }
 

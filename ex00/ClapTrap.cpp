@@ -26,11 +26,18 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(const ClapTrap &c)
 {
-	*this = c;
+	std::cout << "ClapTrap " << this->_name << "copy constructor called" << std::endl;
+	this->_name = c._name;
+	this->_hitpoints = c._hitpoints;
+	this->_energypoints = c._energypoints;
+	this->_attackdamage = c._attackdamage;
 
 }
 ClapTrap &ClapTrap::operator=(const ClapTrap &c)
 {
+	std::cout << "ClapTrap " << this->_name << "copy assignment called" << std::endl;
+	if (this == &c)
+		return *this;
 	this->_name = c._name;
 	this->_hitpoints = c._hitpoints;
 	this->_energypoints = c._energypoints;
