@@ -2,6 +2,9 @@
 
 ScavTrap::ScavTrap() : ClapTrap("default")
 {
+	this->_hitpoints = 100;
+	this->_energypoints = 50;
+	this->_attackdamage = 20;
 	this->_is_guarding = false;
 	std::cout << "ScavTrap default constructor: " << std::endl;
 }
@@ -37,6 +40,23 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &s)
 	this->_attackdamage = s._attackdamage;
 	this->_is_guarding = s._is_guarding;
 	return *this;
+}
+
+void ScavTrap::attack(const std::string& target)
+{
+	if (this->_energypoints == 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " has no energy points to attack!" << std::endl;
+		return;
+	}
+	if (this->_hitpoints == 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " has no health points to attack!" << std::endl;
+		return;
+	}
+	this->_energypoints--;
+	std::cout << "ScavTrap " << this->_name << " attacks " << target;
+	std::cout << ", causing " << this->_attackdamage << " points of damage!" << std::endl;
 }
 
 void	ScavTrap::guardGate()

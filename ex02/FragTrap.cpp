@@ -2,6 +2,9 @@
 
 FragTrap::FragTrap() : ClapTrap("default")
 {
+	this->_hitpoints = 100;
+	this->_energypoints = 100;
+	this->_attackdamage = 30;
 	std::cout << "FragTrap default constructor called !" << std::endl;
 }
 
@@ -38,5 +41,10 @@ FragTrap &FragTrap::operator=(const FragTrap &s)
 
 void	FragTrap::highFivesGuys()
 {
+	if (this->_hitpoints == 0)
+	{
+		std::cout << "FragTrap " << this->_name << " is dead!" << std::endl;
+		return;
+	}
 	std::cout << "FragTrap " << this->_name << " high fives guys!" << std::endl;
 }
